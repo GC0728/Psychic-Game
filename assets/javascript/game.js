@@ -28,6 +28,7 @@ console.log(compPick);
 document.onkeyup = function(userLetter) {
 
 var userGuess = userLetter.key;
+console.log(userLetter);
 var compPick = alphabet[Math.floor(Math.random() * alphabet.length)]; 
 console.log(compPick);
 var alphabet2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y","z"];
@@ -36,7 +37,10 @@ console.log(userGuess);
 
 if (userGuess === compPick) {
     wins++;
+}
 
+else
+  alert ("NOPE!");
 }
 
 // for (var i = 0; i < 9; i++){
@@ -56,10 +60,9 @@ console.log(compPickLower); */
 //     console.log(guesses);
 
 // rewrite html
-var updatePsychic = 
-    "<h1> Psychic game + </h1>" +
-    "<h3>Wins:" + wins + "</h3>" +
-    "<h3>Losses:" + losses + "</h3>" ;
+// var updatePsychic = 
+//     "<h1> Psychic game + </h1>" +
+//     "<h3>Wins:" + wins + "</h3>" +
+//     "<h3>Losses:" + losses + "</h3>" ;
 //    "<h3>Guesses Made:" "</h3>" +
   //  "<h3>Guesses Remaining:" "</h3>"
-};
