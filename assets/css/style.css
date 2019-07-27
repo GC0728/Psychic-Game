@@ -1,3 +1,10 @@
-#guess{
-   
+
+#modal-instructions {
+   display: none;
+
+}
+
+#instructBtn {
+    color: blue;
+    
 }

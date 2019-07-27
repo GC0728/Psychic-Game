@@ -6,16 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="assets/javascript/game.js"> </script>
 </head>
 
 <body>
+
+<!-- Modal Button -->
+    <button id="instructBtn" type="button">
+        Instructions
+    </button>
+
+<!-- Instructions Modal -->
+    <div id="modal-instructions" class="modal">
+        <p>
+            You have nine (9) attempts per round to guess the same letter as the computer (a,b,c, etc.)
+        </p>
+    </div>
+
     <div id="psychic">
     <h1> Psychic game</h1>
         <h3>Wins:</h3>
-        <h3>Losses:</h3>
+        <h3 id="lossCount">Losses:</h3>
         <h3>Guesses Made:</h3>
         <h3>Guesses Remaining:</h3>
     </div>
+
+
 </body>
+
+<script type="text/javascript" src="assets/javascript/game.js"> </script>
+
 </html>
