@@ -6,16 +6,8 @@ event.key
 
 */ 
 
-// <script>
-
-// Alert box to notify welcome the user // For code order, the below needs to go after the variable declarations
-// alert ("Let's play a game!");
-// alert ("You have nine attempts per round to guess the same letter as the computer");
-// alert ("Guess nine letters of the alphabet", "(a, b, c, etc...)");
-
 // Global arrays and variables 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y","z"];
-// var userInput = [];
 var wins = 0;
 // var losses = 0; losses < 10; THIS DOESN'T WORK
 var losses = 0;
@@ -36,7 +28,9 @@ instructBtn.onclick = function() {
   };
 };
 
-// Display User Letter Inputs
+// Display userGuessLower
+var displayLetter = document.getElementById("pickedLetter");
+console.log(displayLetter);
 
 
 
@@ -46,17 +40,11 @@ document.onkeyup = function(userLetter) {
 var userGuess = userLetter.key;
 var userGuessLower = userGuess.toLowerCase();
 console.log(userLetter);
-/////////////////////////////////////////////////////////////
+displayLetter.innerHTML = "Guesses Made: " + userGuessLower;
 
 // GENERATE A RANDOM COMPUTER PICK FROM ALPHABET ARRAY
 var compPick = alphabet[Math.floor(Math.random() * alphabet.length)]; 
 console.log(compPick);
-/////////////////////////////////////////////////////
-
-// UNNECESSARY
-var alphabet2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y","z"];
-/////////////////////////////////////////////
-
 console.log(userGuess);
 console.log(userGuessLower);
  
