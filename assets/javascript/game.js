@@ -32,6 +32,7 @@ function checkLetter(letter, compPick) {
   if (letter === compPick) {
     wins++;
   } else {
+    guessesMade.push(letter);
     losses++;
   };
 };
@@ -45,13 +46,13 @@ document.onkeyup = function(event) {
   var userGuess = event.key.toLowerCase();
 
 // Display last letter guess
-  displayLetter.innerHTML = "Guesses Made: " + userGuess;
+  displayLetter.innerHTML = "Guesses Made: " + guessesMade;
  
-//
   checkLetter(userGuess, compPick);
   console.log(compPick);
   console.log(wins);
   console.log(losses);
+
 };  
 
 
