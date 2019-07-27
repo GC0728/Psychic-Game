@@ -11,6 +11,7 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 var wins = 0;
 var losses = 0;
 var guessesMade = [];
+var guessesRemaining = 9;
 var compPick = alphabet[Math.floor(Math.random() * alphabet.length)]; 
 
 // onClick toggle event for modal-instructions
@@ -34,6 +35,7 @@ function checkLetter(letter, compPick) {
   } else {
     guessesMade.push(letter);
     losses++;
+    guessesRemaining--;
   };
 };
 
@@ -45,8 +47,12 @@ document.onkeyup = function(event) {
 //  Store keyup letter in userGuess variable
   var userGuess = event.key.toLowerCase();
 
-// Display last letter guess
+// Display guesesMade Array
   displayLetter.innerHTML = "Guesses Made: " + guessesMade;
+
+// Display guessesRemaining
+var numRemaining = document.getElementById("remaining");
+numRemaining.innerHTML = "Number of Guesses Remaining " + guessesRemaining;
  
   checkLetter(userGuess, compPick);
   console.log(compPick);
