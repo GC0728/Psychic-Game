@@ -1,11 +1,3 @@
-/* Notes:
-
-Main Objective: userPick == compPick
-If....else if....else
-event.key
-
-*/ 
-
 // Global arrays and variables 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
 var wins = 0;
@@ -32,6 +24,7 @@ instructBtn.onclick = function() {
 function checkLetter(letter, compPick) {
   if (letter === compPick) {
     wins++;
+    guessesMade = [];
   } else {
     guessesMade.push(letter);
     losses++;
@@ -73,6 +66,10 @@ document.onkeyup = function(event) {
   console.log(compPick);
   console.log(wins);
   console.log(losses);
+
+  if (guessesRemaining < 1) {
+    guessesRemaining = 9;
+  };
 
 };  
 
